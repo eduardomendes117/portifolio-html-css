@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npx tailwindcss build src/styles.css -o dist/styles.css"
+    "build": "npx tailwindcss build src/styles.css -o dist/styles.css next build"
   },
   "devDependencies": {
     "daisyui": "^4.11.1",
