@@ -25,7 +25,9 @@
     color: #edf2f7; /* substitua pela cor desejada para o tema escuro */
 }
 
-
+[data-theme="dark"] .typing-container {
+    border-right: .10em solid white;
+}
 
 .separador {
     width: 100%;
@@ -38,23 +40,23 @@
 .typing-container {
     display: inline-flex;
     overflow: hidden;
-    border-right: .10em solid white;
+    border-right: .10em solid black;
     white-space: nowrap;
     font-family: sans-serif;
     animation: typing 10s linear infinite, blink-caret .75s step-end infinite;
-  }
+}
 
-  @keyframes typing {
+@keyframes typing {
     25% { width: 0; }
     50% { width: 100%;}
     75% { width: 0; }
     100% { width: 100% ;}
-  }
+}
 
-  @keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: white; }
-  }
+}
 
 .circles {
     position: absolute;
