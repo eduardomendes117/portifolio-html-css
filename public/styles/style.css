@@ -207,9 +207,10 @@ section.sobre > .texto > p {
 }
 
 section.projetos {
-    padding: 2em;
+    padding: 1em;
     font-size: 3em;
     color: var(--cor2);
+    background-color: rgba(36, 62, 86, 0.1);
 }
 
 section.projetos > h2 {
@@ -228,11 +229,11 @@ section.projetos > picture {
 
 section.projetos > picture a {
     color: transparent;
+    
 }
 
 section.projetos > picture a img {
-    width: 550px;
-    transition: 0.2s ease-out;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 section.projetos > picture a img:hover {
@@ -267,7 +268,6 @@ footer > .icons a {
         height: 80vh;
     }
 }
-
 
 /* Celulares */
 @media (max-width:767px) {
