@@ -200,8 +200,9 @@ section.sobre .texto > h2 {
 
 section.sobre > .texto > p {
     font-size: 1.6em;
-    font-weight: lighter;
+    font-weight: normal;
     text-align: justify;
+    font-family: var(--font1);
     padding-inline: 1em;
     padding-bottom: 5em;
 }
@@ -228,19 +229,18 @@ section.projetos > picture {
 }
 
 section.projetos > picture a {
-    color: transparent;
-    
+    color: transparent;  
 }
 
 section.projetos > picture a img {
     width: 100%;
-    height: 100%;
     border-radius: 0.2em;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 section.projetos > picture a img:hover {
    transform: scale(1.05);
+   transition: 0.2s ease-out;
 }
 
 footer {
@@ -318,11 +318,6 @@ footer > .icons a {
     section.projetos > h2 {
         padding: 0.5em;
     }
-
-    section.projetos > picture a img {
-        width: 100%;
-    }
-
 }
 
 /* Tablets */
