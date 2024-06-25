@@ -172,7 +172,7 @@ section.home .texto > .icons a:hover {
 
 section.sobre {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 1em;
     max-width: 1023px;
     margin: auto;
@@ -194,14 +194,13 @@ section.sobre .texto > h2 {
     text-align: left;
     padding: 1.0em;
     padding-bottom: 0.4em;
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: var(--font1);
 }
 
 section.sobre > .texto > p {
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: normal;
-    text-align: justify;
     font-family: var(--font1);
     padding-inline: 1em;
     padding-bottom: 5em;
@@ -209,7 +208,7 @@ section.sobre > .texto > p {
 
 section.projetos {
     padding: 1em;
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--cor2);
     background-color: rgba(36, 62, 86, 0.1);
 }
@@ -273,19 +272,19 @@ footer > .icons a {
 }
 
 /* Celulares */
-@media (max-width:767px) {
+@media (max-width:867px) {
     header {
         padding-top: 1.6em;
         padding-inline: 1.6em;
     }
 
     section.home .texto > h1 {
-        font-size: 2.9em;
+        font-size: 2em;
         padding-inline: 0.4em;
     }
 
     section.home .texto > p {
-        font-size: 1.2em;
+        font-size: 1.1em;
         padding-inline: 1em;
     }
 
@@ -298,6 +297,10 @@ footer > .icons a {
         width: 23em;
     }
 
+    section.sobre {
+        flex-direction: column;
+    }
+
     section.sobre > .texto > h2 {
         padding: 0.5em;
         padding-top: 1em;
@@ -305,9 +308,14 @@ footer > .icons a {
     }
     
     section.sobre > .texto > p {
-        font-size: 1.6em;
+        font-size: 1.3em;
         padding-inline: 1em;
         padding-bottom: 4em;
+    }
+
+    section.sobre > img {
+        width: 350px;
+        height: 350px;
     }
 
     section.projetos {
