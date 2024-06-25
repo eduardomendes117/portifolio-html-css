@@ -74,15 +74,45 @@
 
       <!--Sobre Mim-->
       <section id="sobre" class="sobre">
-        <img src="public/img/foto-de-perfil.png" alt="" data-aos="fade-up">
+    
+        <div class="content">
+            <div class="texto">
+                <h2 data-aos="fade-up">
+                    Sobre Mim
+                </h2>
+                <p data-aos="fade-up">
+                    Sou um Desenvolvedor Front-End em início de carreira, formado em desenvolvimento front-end através do "Curso em Vídeo". Busco uma oportunidade para aplicar meus conhecimentos e contribuir para o desenvolvimento de interfaces de usuário intuitivas e responsivas.
+                </p>
+            </div>
+            
+            <img src="public/img/foto-de-perfil.png" alt="" data-aos="fade-up">
+        </div>
+      </section>
 
-        <div class="texto">
-            <h2 data-aos="fade-up">
-                Sobre Mim
-            </h2>
-            <p data-aos="fade-up">
-                Desenvolvedor Front-End, com um forte desejo de começar uma carreira na área. Apaixonado por tecnologia e design, estou constantemente buscando melhorar minhas habilidades e aprender novas ferramentas para proporcionar a melhor experiência ao usuário.
-            </p>
+
+      <!--Serviços-->
+      <section id="skils" class="skils">
+
+        <div class="skils-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+            <h2>Criação de sites</h2>
+            <p>E-commerce, Site institucional</p>
+        </div>
+        <div class="skils-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+            </svg>
+            <h2>Responsividade</h2>
+            <p>Priorizo por sites responsivos</p>
+        </div>
+        <div class="skils-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+            </svg>
+            <h2>Rápidos</h2>
+            <p>Sites com SEO otimizados</p>
         </div>
       </section>
 
@@ -134,10 +164,22 @@
 
 
       <!--Contatos-->
-      <section id="contato">
-        
+      <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Se estiver com alguma dúvida entre em contato.</p>
+        <form action="mailto:seuemail@example.com" method="post" enctype="text/plain">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required style="border: none;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required style="border: none;">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit" style="border: none;">Enviar</button>
+        </form>
       </section>
 
+
+      <!--Rodapé-->      
       <footer>
         <div class="icons">
             <a href="https://github.com/eduardomendes117" target="_blank" >
@@ -156,7 +198,7 @@
           offset: 200,
           delay: 50,
           duration: 1000,
-          easing: 'ease-in-out',
+          easing: 'ease-out',
           once: true,
           mirror: false,
           anchorPlacement: 'top-center',

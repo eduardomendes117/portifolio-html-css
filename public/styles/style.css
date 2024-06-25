@@ -10,7 +10,7 @@
     --cor3: #574ABD;
     --cor4: #8CA2FC;
     --cor5: #38DBFC;
-    ---cor6: #8F38FC;
+    --cor6: #8F38FC;
 
     /* Fontes */
     --font1:"Poppins", sans-serif;
@@ -40,22 +40,19 @@ body::-webkit-scrollbar-track {
 }
   
 body::-webkit-scrollbar-thumb {
-    background-color: var(--cor2); /* Cor do polegar */
-    border: 1px solid #fff; /* Cor de borda para polegar */
+    background-color: var(--cor3); /* Cor do polegar */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Cor de borda para polegar */
 }
   
 body::-webkit-scrollbar-thumb:hover {
     background-color: var(--cor4); /* Cor do polegar quando em hover */
-}
-  
-body::-webkit-scrollbar-corner {
-    background: #1e90ff; /* Cor do canto da barra de rolagem */
 }
 
   
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+    background-color: var(--cor2);
 }
 
 
@@ -134,7 +131,7 @@ section.home {
     padding: 10em 0;
 }
 
-section.home > img:hover, section.sobre > img:hover {
+section.home img:hover, section.sobre img:hover {
     transform: scale(1.05);
     transition: 0.3s ease-out;
 }
@@ -171,14 +168,20 @@ section.home .texto > .icons a:hover {
 }
 
 section.sobre {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+section.sobre > .content {
     display: flex;
     flex-wrap: nowrap;
+    background-color: transparent;
+    max-width: 1050px;
+    border-radius: 1em;
     padding: 1em;
-    max-width: 1023px;
     margin: auto;
 }
 
-section.sobre > img {
+section.sobre img {
     width: 300px;
     height: 300px;
     margin: auto;
@@ -186,31 +189,71 @@ section.sobre > img {
 }
 
 section.sobre .texto {
+    max-width: 500px;
+    margin: auto;
     flex: 1;
 }
 
 section.sobre .texto > h2 {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
+    color: var(--cor2);
     padding: 1.0em;
     padding-bottom: 0.4em;
     font-size: 2.5em;
     font-family: var(--font1);
 }
 
-section.sobre > .texto > p {
+section.sobre .texto > p {
     font-size: 1.5em;
     font-weight: normal;
     font-family: var(--font1);
     padding-inline: 1em;
-    padding-bottom: 5em;
+    padding-bottom: 2em;
+}
+
+section.skils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    padding-top: 3em;
+    justify-content: center;
+    background-color: var(--cor2);
+    margin: auto;
+}
+
+section .skils-item {
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+}
+
+section.skils svg {
+    background-color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 5px;
+    width: 64px;
+}
+
+section.skils h2 {
+    padding: 5px;
+    color: var(--cor1);
+}
+
+section.skils p {
+    padding: 5px;
+    color: var(--cor2);
+    font-weight: bolder;
 }
 
 section.projetos {
     padding: 1em;
-    font-size: 2.5em;
-    color: var(--cor2);
-    background-color: rgba(36, 62, 86, 0.1);
+    font-size: 2em;
+    color: var(--cor5);
+    background-color: var(--cor2);
 }
 
 section.projetos > h2 {
@@ -233,13 +276,48 @@ section.projetos > picture a {
 
 section.projetos > picture a img {
     width: 100%;
-    border-radius: 0.2em;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 section.projetos > picture a img:hover {
    transform: scale(1.05);
-   transition: 0.2s ease-out;
+   transition: 0.5s ease-out;
+}
+
+section.contato {
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 2em;
+}
+
+section.contato p {
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: var(--cor1);
+    padding: 1em;
+}
+
+section.contato form {
+    font-size: 0.7em;
+    text-align: left;
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+    flex-direction: column;
+}
+
+section.contato button:hover {
+    background-color: greenyellow;
+}
+
+section.contato form input, section.contato form > textarea, section.contato form > button {
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -279,7 +357,7 @@ footer > .icons a {
     }
 
     section.home .texto > h1 {
-        font-size: 2em;
+        font-size: 3em;
         padding-inline: 0.4em;
     }
 
@@ -292,30 +370,24 @@ footer > .icons a {
         margin-left: 1em;
     }
 
-    section.home > img {
+    section.home img {
         padding-top: 5em;
         width: 23em;
     }
 
-    section.sobre {
-        flex-direction: column;
+    section.sobre .content {
+        flex-direction: column-reverse;
     }
 
-    section.sobre > .texto > h2 {
-        padding: 0.5em;
+    section.sobre .texto > h2 {
         padding-top: 1em;
-        font-size: 3em;
+        font-size: 2.5em;
     }
     
-    section.sobre > .texto > p {
-        font-size: 1.3em;
+    section.sobre .texto > p {
+        font-size: 1em;
         padding-inline: 1em;
         padding-bottom: 4em;
-    }
-
-    section.sobre > img {
-        width: 350px;
-        height: 350px;
     }
 
     section.projetos {
