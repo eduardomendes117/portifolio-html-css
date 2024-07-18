@@ -1,0 +1,289 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+
+    /* Paleta de cores */
+    --cor1: #243E56;
+    --cor2: #385FFC;
+    --cor3: #574ABD;
+    --cor4: #8CA2FC;
+    --cor5: #38DBFC;
+    --cor6: #8F38FC;
+
+    /* Fontes */
+    --Poppins:"Poppins", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --Open-Sans: "Open Sans", sans-serif;
+    --Lato: "Lato", sans-serif;
+    --Montserrat: "Montserrat", sans-serif;
+}
+
+/* Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+  
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3949AB;
+    padding: 20px;
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header nav > a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--Roboto);
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #3949AB;
+} 
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #1A237E;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ header nav ul li a:hover {
+    color: #656ECB;
+    border-bottom: 5px solid #656ECB;
+}
+
+header menu .material-symbols-outlined {
+    font-size: 48px;
+    cursor: pointer;
+}
+
+
+/* Pagina Inicial */
+#home {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: url(../wallpaper004.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+#home .home-container >  h1 {
+    line-height: 1em;
+    color: #1C0051;
+    font-size: 7em;
+    font-family: var(--Roboto);
+    font-weight: 900;
+}
+
+#home .home-container > p {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #656ECB;
+    font-size: 1.2em;
+}
+
+#home .home-container > .links {
+    padding-inline: 10px;
+}
+
+#home .home-container > .links a {
+    display: inline-block;
+}
+
+#home .home-container > .links a:hover {
+    transform: scale(1.1);
+    background-color: #b9bfff;
+    border-radius: 5px;
+}
+
+
+/* Sobre */
+#sobre {
+    background-color: #1A237E;
+    color: white;
+    padding: 100px 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#sobre h2 {
+    color: yellow;
+} 
+
+#sobre p {
+    max-width: 600px;
+    padding: 20px 0;
+    margin: auto;
+}
+
+
+/* Projetos */
+#projetos {
+    background-color: #1A237E;
+    padding: 1em;
+    font-size: 3em;
+    font-family: var(--Poppins);
+}
+
+#projetos > h2 {
+    color: white;
+    width: max-content;
+    border-bottom: 5px solid blue;
+    font-size: 0.7em;
+}
+
+#projetos > .flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#projetos > div .container-img {
+    background-color: rgb(27, 48, 67);
+    box-shadow: 2px 2px 0px rgba(176, 190, 197, 0.1);
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 10px;
+}
+
+#projetos > div .container-img > img {
+    /* min-width: 100%;
+    max-width: 350px;
+    max-height: 186.88px; */
+    width: 100%;
+}
+
+#projetos > div p {
+    position: relative;
+    top: 20px;
+    color: white;
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+#projetos > div a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.4em;
+}
+
+#projetos > div a span {
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+    left: -5px;
+}
+
+#projetos > div a:hover {
+    text-decoration: underline;
+    color: #3949AB;
+}
+
+
+/* Skils */
+#skils {
+    background-color: #1A237E;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#skils h2 {
+    font-size: 2em;
+    padding-top: 50px;
+}
+
+#skils .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 20px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+#skils .box {
+    background-color: #243E56;
+    border-bottom: 4px #8F38FC solid;
+    width: 12rem;
+    padding: 10px;
+    width: max-content;
+}
+
+/* Contato */
+#contato {
+    background-color: #1A237E;
+    color: white;
+    font-size: 1.3em;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#contato h2 {
+    padding: 20px;
+}
+
+#contato p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+
+a:hover {
+    color: yellow;
+}
+
+
+/* Foooter */
+footer {
+    background-color: var(--cor2);
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    bottom: 0;
+}
