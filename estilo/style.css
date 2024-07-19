@@ -56,6 +56,7 @@ header nav {
     align-items: center;
 }
 
+
 header nav ul {
     display: flex;
     list-style: none;
@@ -82,13 +83,12 @@ header nav ul li a {
     font-weight: bold;
 }
 
- header nav ul li a:hover {
+header nav ul li a:hover {
     color: #656ECB;
     border-bottom: 5px solid #656ECB;
 }
 
-header menu .material-symbols-outlined {
-    font-size: 48px;
+header menu {
     cursor: pointer;
 }
 
@@ -100,7 +100,7 @@ header menu .material-symbols-outlined {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background: url(../wallpaper004.jpg) no-repeat;
+    background: url(../img/bk-gradient.jpg) no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -139,10 +139,11 @@ header menu .material-symbols-outlined {
 
 /* Sobre */
 #sobre {
-    background-color: #1A237E;
-    color: white;
     padding: 100px 50px;
     text-align: center;
+    background-color: #8EACBE;
+    border: 1px solid ;
+    color: white;
     font-size: 1.5em;
 }
 
@@ -153,14 +154,15 @@ header menu .material-symbols-outlined {
 #sobre p {
     max-width: 600px;
     padding: 20px 0;
+    font-weight: lighter;
     margin: auto;
 }
 
 
 /* Projetos */
 #projetos {
-    background-color: #1A237E;
-    padding: 1em;
+    background-color: lightslategrey;
+    padding: 1em 20px;
     font-size: 3em;
     font-family: var(--Poppins);
 }
@@ -168,7 +170,7 @@ header menu .material-symbols-outlined {
 #projetos > h2 {
     color: white;
     width: max-content;
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid yellow;
     font-size: 0.7em;
 }
 
@@ -180,7 +182,7 @@ header menu .material-symbols-outlined {
 }
 
 #projetos > div .container-img {
-    background-color: rgb(27, 48, 67);
+    background-color: var(--cor1);
     box-shadow: 2px 2px 0px rgba(176, 190, 197, 0.1);
     text-align: center;
     margin-top: 40px;
@@ -217,7 +219,6 @@ header menu .material-symbols-outlined {
 }
 
 #projetos > div a:hover {
-    text-decoration: underline;
     color: #3949AB;
 }
 

@@ -10,6 +10,10 @@ Grandes telas: acima de 1200px
 */
 
 @media screen and (max-width: 600px) {
+    header {
+        padding: 10px 20px;
+    }
+
     header nav {
         display: none;
     }
@@ -42,10 +46,6 @@ Grandes telas: acima de 1200px
         font-size: 1.8em;
     }
 
-    section.home > img, section.sobre > img {
-        width: 60%;
-    }
-
     section.sobre {
         font-size: 1em;
     }
@@ -53,12 +53,6 @@ Grandes telas: acima de 1200px
 
 /* Tablet */
 @media screen and (min-width: 992px) {
-
-
-    section.sobre {
-        font-size: 1.2em;
-    }
-    
     section.sobre {
         font-size: 1.2em;
     }
@@ -66,12 +60,6 @@ Grandes telas: acima de 1200px
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
-
-
-    section.sobre {
-        font-size: 1.3em;
-    }
-    
     section.sobre {
         font-size: 1.3em;
     }
@@ -79,12 +67,6 @@ Grandes telas: acima de 1200px
 
 /* Grandes Telas */
 @media screen and (min-width: 1500px) {
-
-
-    section.sobre {
-        font-size: 1.5em;
-    }
-    
     section.sobre {
         font-size: 1.5em;
     }
