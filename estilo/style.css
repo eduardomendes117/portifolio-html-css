@@ -41,14 +41,16 @@ html, body {
 
 /* header */
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #3949AB;
     padding: 20px;
-    max-width: 1280px;
+    width: 100%;
     margin: auto;
     text-align: center;
+    z-index: 1;
 }
 
 header nav {
@@ -56,6 +58,22 @@ header nav {
     align-items: center;
 }
 
+header nav.active {
+    display: block;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    height: 300px;
+    border-radius: 20px;
+    width: 200px;
+}
+
+header nav.active ul {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
 
 header nav ul {
     display: flex;
@@ -78,17 +96,18 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #1A237E;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
 
 header nav ul li a:hover {
-    color: #656ECB;
-    border-bottom: 5px solid #656ECB;
+    color: blue;
+    border-bottom: 5px solid blue;
 }
 
 header menu {
+    color: black;
     cursor: pointer;
 }
 
@@ -99,7 +118,7 @@ header menu {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background: url(../img/bk-gradient.jpg) no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -140,35 +159,39 @@ header menu {
 /* Sobre */
 #sobre {
     padding: 100px 50px;
-    text-align: center;
-    background-color: #8EACBE;
-    border: 1px solid ;
-    color: white;
+    text-align: cente;
+    border-top: 5px solid var(--cor3);
+    background: url(../wallpaper004.jpg);
+    background-size: cover;
+    background-position: center center;
     font-size: 1.5em;
 }
 
 #sobre h2 {
-    color: yellow;
+    text-align: center;
+    font-size: 2em;
+    color: var(--cor3);
 } 
 
 #sobre p {
     max-width: 600px;
     padding: 20px 0;
-    font-weight: lighter;
+    font-weight: normal;
     margin: auto;
 }
 
 
 /* Projetos */
 #projetos {
-    background-color: lightslategrey;
+    background-color: var(--cor4);
+    color: white;
     padding: 1em 20px;
     font-size: 3em;
     font-family: var(--Poppins);
 }
 
 #projetos > h2 {
-    color: white;
+    color: var(--cor3);
     width: max-content;
     border-bottom: 5px solid yellow;
     font-size: 0.7em;
@@ -182,30 +205,31 @@ header menu {
 }
 
 #projetos > div .container-img {
-    background-color: var(--cor1);
-    box-shadow: 2px 2px 0px rgba(176, 190, 197, 0.1);
-    text-align: center;
-    margin-top: 40px;
-    padding: 30px 10px;
+    position: relative;
+    margin-top: 30px;
+    width: 300px;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporção 16:9 */
 }
 
 #projetos > div .container-img > img {
-    /* min-width: 100%;
-    max-width: 350px;
-    max-height: 186.88px; */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 #projetos > div p {
     position: relative;
     top: 20px;
-    color: white;
     font-size: 0.5em;
     font-weight: bold;
 }
 
 #projetos > div a {
-    color: yellow;
+    color: var(--cor3);
     text-decoration: none;
     font-weight: bold;
     font-size: 0.4em;
@@ -235,6 +259,7 @@ header menu {
 #skils h2 {
     font-size: 2em;
     padding-top: 50px;
+    margin-bottom: 20px;
 }
 
 #skils .cards {
@@ -256,9 +281,9 @@ header menu {
 
 /* Contato */
 #contato {
-    background-color: #1A237E;
+    background-color: var(--cor6);
     color: white;
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 100px 0;
     text-align: center;
 }
@@ -272,7 +297,9 @@ header menu {
     font-weight: bold;
 }
 
-
+a {
+    color: blue;
+}
 
 a:hover {
     color: yellow;
