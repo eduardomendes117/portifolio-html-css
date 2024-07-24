@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 
 :root {
@@ -45,6 +46,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
     color: #3949AB;
     padding: 20px;
     width: 100%;
@@ -123,6 +126,7 @@ header menu {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    font-family: var(--Roboto);
     
 }
 
@@ -130,7 +134,7 @@ header menu {
     line-height: 1em;
     color: #1C0051;
     font-size: 7em;
-    font-family: var(--Roboto);
+    
     font-weight: 900;
 }
 
@@ -139,6 +143,7 @@ header menu {
     padding: 0 10px;
     color: #656ECB;
     font-size: 1.2em;
+    font-family: var(--Poppins);
 }
 
 #home .home-container > .links {
@@ -161,9 +166,6 @@ header menu {
     padding: 100px 50px;
     text-align: cente;
     border-top: 5px solid var(--cor3);
-    background: url(../wallpaper004.jpg);
-    background-size: cover;
-    background-position: center center;
     font-size: 1.5em;
 }
 
@@ -171,6 +173,7 @@ header menu {
     text-align: center;
     font-size: 2em;
     color: var(--cor3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.444);
 } 
 
 #sobre p {
@@ -190,10 +193,22 @@ header menu {
     font-family: var(--Poppins);
 }
 
+#projetos > button {
+    cursor: pointer;
+    background-color: var(--cor3);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--cor3);
+    box-shadow: 1px 1px 0px black;
+}
+
 #projetos > h2 {
-    color: var(--cor3);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.444);
     width: max-content;
-    border-bottom: 5px solid yellow;
+    border-bottom: 5px solid blue;
     font-size: 0.7em;
 }
 
@@ -201,12 +216,23 @@ header menu {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
     gap: 30px;
+}
+
+#projetos .div {
+    padding: 20px;
+    border: 2px solid var(--cor3);
+    border-radius: 10px;
+    box-shadow: 1px 1px 0px var(--cor3);
+    background-color: white;
+    color: black;
 }
 
 #projetos > div .container-img {
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
+    border: 2px solid var(--cor3);
     width: 300px;
     overflow: hidden;
     padding-top: 56.25%; /* Proporção 16:9 */
@@ -229,13 +255,16 @@ header menu {
 }
 
 #projetos > div a {
-    color: var(--cor3);
+    color: white;
+    background-color: var(--cor3);
+    padding: 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.4em;
 }
 
-#projetos > div a span {
+#projetos > div a i {
     font-weight: bold;
     position: relative;
     top: 5px;
@@ -243,7 +272,7 @@ header menu {
 }
 
 #projetos > div a:hover {
-    color: #3949AB;
+    color: darkblue;
 }
 
 
@@ -257,6 +286,7 @@ header menu {
 }
 
 #skils h2 {
+    font-family: var(--Poppins);
     font-size: 2em;
     padding-top: 50px;
     margin-bottom: 20px;
@@ -284,6 +314,8 @@ header menu {
     background-color: var(--cor6);
     color: white;
     font-size: 1.4em;
+    font-family: var(--Poppins);
+    font-weight: bold;
     padding: 100px 0;
     text-align: center;
 }
@@ -294,7 +326,6 @@ header menu {
 
 #contato p {
     padding: 10px;
-    font-weight: bold;
 }
 
 a {

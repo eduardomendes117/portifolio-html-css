@@ -26,6 +26,10 @@ Grandes telas: acima de 1200px
         padding: 100px 20px;
         text-align: left;
     }
+
+    section.projetos > div .container-img > img {
+        width: 100%;
+    }
 }
 
 /* Pequenas Telas */
@@ -34,7 +38,7 @@ Grandes telas: acima de 1200px
         display: none;
     }
 
-    section.projetos > div .container-img > img{
+    section.projetos > div .container-img > img {
         width: 300px;
         height: 186.88px;
     }
@@ -75,10 +79,6 @@ Grandes telas: acima de 1200px
 
 /* Grandes Telas */
 @media screen and (min-width: 1500px) {
-    header {
-        padding: 40px;
-    }
-
     section.sobre {
         font-size: 1.5em;
     }
