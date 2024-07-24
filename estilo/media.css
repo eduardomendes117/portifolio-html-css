@@ -14,10 +14,6 @@ Grandes telas: acima de 1200px
         padding: 10px 20px;
     }
 
-    header nav {
-        display: none;
-    }
-
     #home .home-container > h1{
         font-size: 5em;
     }
@@ -34,8 +30,8 @@ Grandes telas: acima de 1200px
 
 /* Pequenas Telas */
 @media screen and (min-width: 600px) {
-    header > menu {
-        display: none;
+    header {
+        padding-inline: 30px;
     }
 
     section.projetos > div .container-img > img {
