@@ -42,78 +42,55 @@ html, body {
 
 /* header */
 header {
+    padding: 10px;
     position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    color: #3949AB;
-    padding: 20px;
+    background-color: white;
     width: 100%;
-    margin: auto;
-    text-align: center;
+    left: 0;
     z-index: 1;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+header nav a:hover {
+    opacity: 0.7;
 }
 
 header nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    font-family: var(--Poppins);
+    font-weight: 600;
+    height: 8vh;
 }
 
-header nav.active {
-    display: block;
-    position: fixed;
-    top: 70px;
-    right: 0;
-    background-color: white;
-    height: 300px;
-    border-radius: 20px;
-    width: 200px;
-}
-
-header nav.active ul {
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-}
-
-header nav ul {
-    display: flex;
+.nav-list {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
-header nav > a {
-    text-decoration: none;
-    color: white;
-    font-family: var(--Roboto);
-    padding: 8px 20px;
-    border-radius: 20px;
-    background-color: #3949AB;
-} 
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
 }
 
-header nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    color: blue;
-    border-bottom: 5px solid blue;
-}
-
-header menu {
-    color: black;
+.mobile-menu {
+    display: none;
     cursor: pointer;
 }
 
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--cor3);
+    margin: 8px;
+    transition: 0.3s;
+}
 
 /* Pagina Inicial */
 #home {
@@ -311,7 +288,11 @@ header menu {
 
 /* Contato */
 #contato {
+    position: relative;
+    top: -20px;
     background-color: var(--cor6);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     color: white;
     font-size: 1.4em;
     font-family: var(--Poppins);
@@ -332,17 +313,37 @@ a {
     color: blue;
 }
 
-a:hover {
-    color: yellow;
-}
-
 
 /* Foooter */
 footer {
-    background-color: var(--cor2);
+    margin-top: -20px;
+    background-color: #8CA2FC;
     color: #FFFFFF;
     text-align: center;
     font-weight: bold;
     padding: 20px;
     bottom: 0;
 }
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
