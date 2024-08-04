@@ -1,0 +1,543 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap');
+
+
+:root {
+
+    /* Paleta de cores */
+    --cor1: #243E56;
+    --cor2: #385FFC;
+    --cor3: #574ABD;
+    --cor4: #8CA2FC;
+    --cor5: #38DBFC;
+    --cor6: #8F38FC;
+
+    /* Fontes */
+    --Poppins:"Poppins", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --Open-Sans: "Open Sans", sans-serif;
+    --Lato: "Lato", sans-serif;
+    --Montserrat: "Montserrat", sans-serif;
+    --Kanit: "Kanit", sans-serif;
+    --Baloo-Paaji-2: "Baloo Paaji 2", sans-serif;
+}
+
+/* Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+  
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    cursor: url(chrome-extension://ckejmhbmlajgoklhgbapkiccekfoccmk/assets/pictos/cursor.png) 17 17, pointer;
+}
+
+/* Pagina Inicial */
+#home {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../img/bk-gradient.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+#home .home-container {
+    padding: 20px;
+} 
+
+#home .home-container > h1 {
+    /* clamp => min, ideal, max */
+    font-size: clamp( 60px, 8vw , 90px);
+    line-height: 1.1;
+    font-family: var(--Baloo-Paaji-2);
+}
+
+#home .home-container > h1 .up { color: #5A5B61; font-weight: 800;}
+#home .home-container > h1 .down { color: #363a40; font-weight: bolder;}
+
+#home .home-container >  p {
+    line-height: 1.2;
+    color: #1C0051;
+    padding-bottom: 25px;
+    font-size: clamp( 16px, 2vw , 25px);
+    font-family: var(--Open-Sans);
+    font-weight: lighter;
+    letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
+}
+
+#home .home-container > .links {
+    padding-inline: 0px;
+}
+
+#home .home-container > .links a {
+    display: inline-block;
+}
+
+#home .home-container > .links a:hover {
+    transform: scale(1.1);
+    background-color: #b9bfff;
+    border-radius: 5px;
+}
+
+
+/* Sobre */
+#sobre {
+    text-align: center;
+    border-top: 5px solid var(--cor3);
+    font-size: clamp( 20px, 2vw , 30px);
+    font-family: var(--Open-Sans);
+    background-color:  #e0e0e0;
+    padding: 50px 20px;
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+}
+
+/* From Uiverse.io by Praashoo7 */ 
+#sobre .container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+#sobre .container span {
+    font-weight: bold;
+    font-family: var(--Baloo-Paaji-2);
+    color: #574ABD;
+    text-align: center;
+    display: block;
+    font-size: 1.2em;
+}
+
+#sobre .container .info {
+    max-width: 600px;
+    font-weight: 400;
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 0.72em;
+    padding: 1em;
+    margin: auto;
+}
+
+#sobre .container .img {
+    width: 4.8em;
+    height: 4.8em;
+    background: url(../img/Design\ sem\ nome\ \(3\).png);
+    background-size: contain;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#sobre .container .card {
+    width: fit-content;
+    height: fit-content;
+    background-color: #e0e0e0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+}
+
+    /* for all social containers*/
+    #sobre .container .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+    }
+    /* instagram*/
+    #sobre .container .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+    }
+    /* linkedin*/
+    #sobre .container .containerTwo:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+    }
+    /* github*/
+    #sobre .container .containerThree:hover {
+    background-color: gray;
+    transition-duration: .3s;
+    }
+
+    #sobre .container .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+    }
+
+    #sobre .container .socialSvg {
+    width: 17px;
+    }
+
+    #sobre .container .socialSvg path {
+    fill: rgb(255, 255, 255);
+    }
+
+    #sobre .container .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+    }
+
+    @keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    }
+/* Projetos */
+#projetos {
+    padding: 20px;
+    font-family: var(--Baloo-Paaji-2);
+}
+
+#projetos h2 {
+    padding: 30px 20px;
+    font-weight: 900;
+    font-size: clamp( 30px, 3vw , 40px);
+    text-align: center;
+    margin: auto;
+}
+
+#projetos > .flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+#projetos .flex .card {
+    position: relative;
+    width: 500px;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#projetos .flex #card1 { background: url(../img/projeto-android.png) no-repeat; background-size: cover;}
+#projetos .flex #card2 { background: url(../img/projeto-social.png) no-repeat; background-size: cover;}
+#projetos .flex #card3 { background: url(../img/projeto-login.png) no-repeat; background-size: cover;}
+#projetos .flex #card4 { background: url(../img/projeto-cordel.png) no-repeat; background-size: cover;}
+  
+#projetos .flex .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+#projetos .flex .card__image {
+    width: 100%;
+    height: 100%;
+}
+  
+#projetos .flex .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+  
+#projetos .flex .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+#projetos .flex .card:hover .card__content {
+    transform: rotateX(0deg);
+}
+  
+#projetos .flex .card__title {
+    margin: 0;
+    font-size: 20px;
+    color: var(--cor3);
+    font-weight: 700;
+}
+  
+#projetos .flex .card:hover svg {
+    scale: 0;
+}
+  
+#projetos .flex .card__description {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+}
+  
+#projetos .flex .card__button {
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--cor3);
+    border: none;
+    color: white;
+}
+
+#projetos .flex .card__button a {
+    
+    color: white;
+}
+  
+#projetos .flex .secondary {
+    background: transparent;
+    border: 1px solid #777;
+} 
+
+#projetos .flex .secondary a {
+    color: #777;
+}
+  
+
+#projetos .link {
+    display: block;
+    text-align: center;
+    border: 1px solid gray;
+    margin: 20px auto;
+    padding: 5px 10px;
+    max-width: 500px;
+}
+
+#projetos .link:hover {
+    background-color: var(--cor3);
+    color: white;
+}
+
+/* Skils */
+#skils {
+    background-color: #1A237E;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#skils h2 {
+    font-family: var(--Poppins);
+    font-size: 2em;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+#skils .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 20px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+#skils .box {
+    background-color: #243E56;
+    border-bottom: 4px #8F38FC solid;
+    width: 12rem;
+    padding: 10px;
+    width: max-content;
+}
+
+/* Contato */
+#contato {
+    position: relative;
+    top: -20px;
+    background-color: var(--cor6);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    font-size: 1.4em;
+    font-family: var(--Poppins);
+    font-weight: bold;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#contato h2 {
+    padding: 20px;
+}
+
+#contato p {
+    padding: 10px;
+}
+
+a {
+    color: blue;
+}
+
+.login-box {
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input, .login-box .user-box textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+
+  .login-box .user-box textarea {
+    padding: 2px 0;
+}
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+  }
+
+  .login-box .user-box textarea:focus ~ label,
+  .login-box .user-box textarea:valid ~ label {
+    top: -30px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+}
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: var(--cor3);
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+  
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cor3));
+    animation: btn-anim1 2s linear infinite;
+  }
+
+
+/* Foooter */
+footer {
+    margin-top: -20px;
+    background-color: #8CA2FC;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    bottom: 0;
+}
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
