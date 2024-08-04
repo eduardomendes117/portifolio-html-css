@@ -16,7 +16,7 @@ a {
 
 header.transparent {
   background-color: transparent;
-  color: #574ABD;
+  color: #fff;
 }
 
 header.solid {
@@ -25,6 +25,12 @@ header.solid {
   padding-top: 10px;
   padding-inline: 30px;
   color: #646FCB;
+}
+header.solid .hamburger { border-top: 3px solid #574ABD; }
+
+header.solid .hamburger::after,
+header.solid .hamburger::before{
+  background: #574ABD;
 }
   
 .nav {
@@ -68,7 +74,7 @@ header.solid {
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid #646FCB;
+    border-top: 3px solid #fff;
     cursor: pointer;
 }
   
@@ -78,7 +84,7 @@ header.solid {
     display: block;
     width: 30px;
     height: 3px;
-    background: #646FCB;
+    background: #fff;
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
@@ -110,6 +116,7 @@ header.solid {
   
     .nav-list a {
       font-size: 24px;
+      color: #574ABD;
       opacity: 0;
     }
   
@@ -138,16 +145,18 @@ header.solid {
   
     .nav.active .hamburger {
       position: fixed;
-      top: 26px;
-      right: 16px;
+      top: 40px;
+      right: 40px;
       border-top-color: transparent;
     }
   
     .nav.active .hamburger::before {
+      background: #574ABD;
       transform: rotate(135deg);
     }
   
     .nav.active .hamburger::after {
+      background: #574ABD;
       transform: rotate(-135deg);
       top: -7px;
     }

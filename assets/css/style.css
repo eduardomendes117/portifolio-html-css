@@ -51,20 +51,30 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(../img/bk-gradient.jpg) no-repeat;
-    background-attachment: fixed;
+    background: url(../img/header.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
+    
 }
 
-#home .home-container {
+#home .overlay {
     padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
+    
 } 
+
+#home .home-container { margin: auto; }
 
 #home .home-container > h1 {
     /* clamp => min, ideal, max */
     font-size: clamp( 60px, 8vw , 90px);
     line-height: 1.1;
+    margin: auto;
     font-family: var(--Baloo-Paaji-2);
 }
 
@@ -99,10 +109,9 @@ html, body {
 /* Sobre */
 #sobre {
     text-align: center;
-    border-top: 5px solid var(--cor3);
     font-size: clamp( 20px, 2vw , 30px);
     font-family: var(--Open-Sans);
-    background-color:  #e0e0e0;
+    background-color:  #fff;
     padding: 50px 20px;
     background-size: 30px 30px;
     background-position: -5px -5px;
@@ -113,7 +122,7 @@ html, body {
     margin: auto;
     width: 100%;
     height: 100%;
-    background: #e0e0e0;
+    background: #fff;
     transition: 1s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -142,7 +151,7 @@ html, body {
 #sobre .container .img {
     width: 4.8em;
     height: 4.8em;
-    background: url(../img/Design\ sem\ nome\ \(3\).png);
+    background: url(../img/foto-de-perfil.png);
     background-size: contain;
     border-radius: 50%;
     margin: auto;
@@ -151,7 +160,7 @@ html, body {
 #sobre .container .card {
     width: fit-content;
     height: fit-content;
-    background-color: #e0e0e0;
+    background-color: #fff;
     margin: auto;
     display: flex;
     align-items: center;
@@ -333,33 +342,76 @@ html, body {
 }
   
 
-#projetos .link {
-    display: block;
-    text-align: center;
-    border: 1px solid gray;
-    margin: 20px auto;
-    padding: 5px 10px;
+#projetos .btn {
+    --color: #574ABD;
+    --color2: #fff;
     max-width: 500px;
-}
-
-#projetos .link:hover {
-    background-color: var(--cor3);
-    color: white;
-}
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 25px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 17px;
+    font-family: var(--Roboto);
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   #projetos .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   #projetos .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   #projetos .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   #projetos .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   #projetos .btn:hover {
+    color: var(--color2);
+   }
+   
+   #projetos .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
 
 /* Skils */
 #skils {
-    background-color: #1A237E;
-    padding: 50px 0;
-    text-align: center;
-    color: white;
-    font-weight: bold;
+    padding: 50px 0px;
 }
 
 #skils h2 {
-    font-family: var(--Poppins);
-    font-size: 2em;
-    padding-top: 50px;
+    font-family: var(--Baloo-Paaji-2);
+    text-align: center;
+    font-size: clamp( 30px, 3vw , 40px);
+    padding-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -372,9 +424,13 @@ html, body {
     justify-content: center;
 }
 
-#skils .box {
-    background-color: #243E56;
+#skils .box-item {
+    color: #fff;
+    text-align: center;
+    background-color: #1C0051;
     border-bottom: 4px #8F38FC solid;
+    border-radius: 5px;
+    font-weight: bold;
     width: 12rem;
     padding: 10px;
     width: max-content;
@@ -382,14 +438,12 @@ html, body {
 
 /* Contato */
 #contato {
-    position: relative;
-    top: -20px;
     background-color: var(--cor6);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     color: white;
-    font-size: 1.4em;
-    font-family: var(--Poppins);
+    font-family: var(--Baloo-Paaji-2);
+    font-size: clamp( 20px, 3vw , 40px);
     font-weight: bold;
     padding: 100px 0;
     text-align: center;
@@ -478,8 +532,8 @@ a {
   }
   
   .login-box a:hover {
-    background: var(--cor3);
-    color: #fff;
+    background: #fff;
+    color: var(--cor6);
     border-radius: 5px;
   }
   
@@ -510,13 +564,30 @@ a {
 
 /* Foooter */
 footer {
-    margin-top: -20px;
-    background-color: #8CA2FC;
-    color: #FFFFFF;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    bottom: 0;
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--cor6);
+   color: #fff;
+   align-items: center;
+   font-family: var(--Open-Sans);
+   padding: 10px;
+   padding-inline: 40px;
+}
+
+footer .icons {
+    display: flex;
+    gap: 20px;
+}
+
+footer .icons-item.insta {
+    padding: 6px 6px 0px 6px;
+}
+
+footer .icons-item {
+    background-color: #333;
+    padding: 2px 6px 0px 6px;
+    border-radius: 50%;
+    fill: #fff;
 }
 
 @keyframes navLinkFade {
