@@ -178,25 +178,18 @@
             <h2>Vamos Trabalhar Juntos?</h2>
 
             <div class="login-box">
-                <form>
-                  <div class="user-box">
-                    <input type="text" name="" required="">
-                    <label>Nome</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="email" name="" required="">
-                    <label>E-mail</label>
-                  </div>
-                  <div class="user-box">
-                    <textarea name="" id="" required></textarea>
-                    <label>Mensagem</label>
-                  </div>
-                  <a href="#">
-                         enviar
-                     <span></span>
-                  </a>
-                </form>
-              </div>
+              <form action="https://formsubmit.co/eduardo12mendes2016@gmail.com" method="POST" class="form">
+              <label for="name">Nome</label>
+              <input type="text" name="name" id="name" required />
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" required />
+              <label for="message">Mensagem</label>
+              <textarea name="message" id="message" required></textarea>
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="http://127.0.0.1:5501/thanks.html"/>
+              <button type="submit">Enviar</button>
+            </form> 
+            </div>
         </section>
     </main>
 

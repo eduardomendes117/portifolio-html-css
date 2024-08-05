@@ -1,12 +1,5 @@
 @charset "UFT-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap');
 
 
@@ -22,11 +15,8 @@
 
     /* Fontes */
     --Poppins:"Poppins", sans-serif;
-    --Roboto: "Roboto", sans-serif;
-    --Open-Sans: "Open Sans", sans-serif;
-    --Lato: "Lato", sans-serif;
-    --Montserrat: "Montserrat", sans-serif;
-    --Kanit: "Kanit", sans-serif;
+    --Roboto: Roboto, sans-serif;
+    --Open-Sans: 'Open Sans', sans-serif;
     --Baloo-Paaji-2: "Baloo Paaji 2", sans-serif;
 }
 
@@ -39,9 +29,8 @@
 }
   
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;
-    cursor: url(chrome-extension://ckejmhbmlajgoklhgbapkiccekfoccmk/assets/pictos/cursor.png) 17 17, pointer;
 }
 
 /* Pagina Inicial */
@@ -438,135 +427,98 @@ html, body {
 
 /* Contato */
 #contato {
-    background-color: var(--cor6);
+    background-color: #574ABD;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     color: white;
     font-family: var(--Baloo-Paaji-2);
-    font-size: clamp( 20px, 3vw , 40px);
+    font-size: clamp( 20px, 2vw , 30px);
     font-weight: bold;
-    padding: 100px 0;
-    text-align: center;
+    padding: 50px 0;
 }
 
 #contato h2 {
-    padding: 20px;
-}
-
-#contato p {
-    padding: 10px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 a {
     color: blue;
 }
 
-.login-box {
-    width: 400px;
-    padding: 40px;
+#contato .login-box {
+    max-width: 500px;
     margin: auto;
-    box-sizing: border-box;
-    border-radius: 10px;
-  }
-  
-  .login-box .user-box {
-    position: relative;
-  }
-  
-  .login-box .user-box input, .login-box .user-box textarea {
+}
+
+.form {
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-  }
-
-  .login-box .user-box textarea {
-    padding: 2px 0;
-}
-  
-  .login-box .user-box label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
+    max-width: 32rem;
+    font-size: 1.125rem;
   }
   
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #bdb8b8;
-    font-size: 12px;
-  }
-
-  .login-box .user-box textarea:focus ~ label,
-  .login-box .user-box textarea:valid ~ label {
-    top: -30px;
-    left: 0;
-    color: #bdb8b8;
-    font-size: 12px;
-}
-  
-  .login-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #ffffff;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 1px solid;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
-  }
-  
-  .login-box a:hover {
-    background: #fff;
-    color: var(--cor6);
-    border-radius: 5px;
-  }
-  
-  .login-box a span {
-    position: absolute;
+  .form label,
+  .form input,
+  .form textarea,
+  .form button {
     display: block;
-  }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-  
-    50%,100% {
-      left: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(1) {
-    bottom: 2px;
-    left: -100%;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--cor3));
-    animation: btn-anim1 2s linear infinite;
   }
-
+  
+  .form label {
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form input,
+  .form textarea {
+    font: inherit;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+  }
+  
+  .form textarea {
+    min-height: 13rem;
+    resize: vertical;
+  }
+  
+  .form input:hover,
+  .form input:focus,
+  .form textarea:hover,
+  .form textarea:focus {
+    outline: none;
+    border-color: #09d;
+    box-shadow: 0 0 0 3px #4dc8ff;
+  }
+  
+  .form button {
+    display: block;
+    padding: 1rem;
+    background: #0072c4;
+    color: #fff;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .form button:hover,
+  .form button:focus {
+    outline: none;
+    background: #09d;
+  }
 
 /* Foooter */
 footer {
    display: flex;
    justify-content: space-between;
-   background-color: var(--cor6);
+   background-color: #574ABD;
    color: #fff;
    align-items: center;
    font-family: var(--Open-Sans);

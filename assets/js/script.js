@@ -10,3 +10,9 @@ AOS.init({
 });
 
 // Scripts Gerais
+
+function enviar() {
+    window.alert(`<h1>Obrigado pelo seu contato!</h1>
+    
+    <p>Agradeço por ter entrado em contato. Sua mensagem será respondida o mais breve possível.</p>`)
+}
