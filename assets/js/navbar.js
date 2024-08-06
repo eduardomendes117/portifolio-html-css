@@ -4,7 +4,7 @@ const links = document.querySelectorAll(".link");
 
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
-links.forEach(link => {
+links.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
   });

@@ -9,31 +9,26 @@ Desktop: 992px até 1200px
 Grandes telas: acima de 1200px
 */
 
-
 /* Pequenas Telas */
 @media screen and (max-width: 600px) {
-    
 }
 
 /* Celular */
 @media screen and (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        gap: 20px;
-    }
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 /* Tablet */
 @media screen and (min-width: 769px) and (max-width: 992px) {
-
 }
 
 /* Desktop */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-    
 }
 
 /* Grandes Telas */
 @media screen and (min-width: 1201px) {
-    
 }
