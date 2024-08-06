@@ -9,10 +9,12 @@ AOS.init({
   anchorPlacement: "top-center",
 });
 
-// Scripts Gerais
+// Loader page 
 
-function enviar() {
-  window.alert(`<h1>Obrigado pelo seu contato!</h1>
-    
-    <p>Agradeço por ter entrado em contato. Sua mensagem será respondida o mais breve possível.</p>`);
-}
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+      document.querySelector('.pre').style.display = 'none';
+      document.querySelector('.content').style.display = 'block';
+      document.body.style.overflow = 'auto';
+  },);
+});

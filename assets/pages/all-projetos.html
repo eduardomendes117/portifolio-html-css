@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js"></script>
+    <script src="../js/navbar.js"></script>
     <title>Projetos | Eduardo Mendes</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      body {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pre"></div>
+
+    <div class="content">
+      <header class="header" id="header">
+        <nav class="nav">
+          <a href="index.html" class="logo"> >_ </a>
+          <button class="hamburger"></button>
+          <ul class="nav-list">
+            <li><a class="link" href="#home">Inicio</a></li>
+            <li><a class="link" href="#sobre">Sobre</a></li>
+            <li><a class="link" href="#projetos">Projetos</a></li>
+            <li><a class="link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+      const links = document.querySelectorAll(".link");
+
+      hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+    </script>
+  </body>
 </html>
