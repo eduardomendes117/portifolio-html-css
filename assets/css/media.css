@@ -15,9 +15,9 @@ Grandes telas: acima de 1200px
 
 /* Celular */
 @media screen and (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    gap: 20px;
+  footer .container-footer {
+    flex-direction: column-reverse;
+    gap: 10px;
   }
 }
 
