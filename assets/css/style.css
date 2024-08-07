@@ -7,7 +7,7 @@
   --cor1: #243e56;
   --cor2: #385ffc;
   --cor3: #574abd;
-  --cor4: #8ca2fc;
+  --cor4: #5A5B61;
   --cor5: #38dbfc;
   --cor6: #8f38fc;
 
@@ -32,9 +32,10 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
+/* end */
 
-/* Pagina Inicial */
-#home {
+/* estilos section home */
+.home {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -45,7 +46,7 @@ body {
   background-size: cover;
 }
 
-#home .overlay {
+.home .overlay {
   padding: 20px;
   display: inline-flex;
   justify-content: center;
@@ -60,11 +61,11 @@ body {
   );
 }
 
-#home .home-container {
+.home .home-container {
   margin: auto;
 }
 
-#home .home-container > h1 {
+.home .home-container > h1 {
   /* clamp => min, ideal, max */
   font-size: clamp(60px, 8vw, 90px);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -73,16 +74,16 @@ body {
   font-family: var(--Baloo-Paaji-2);
 }
 
-#home .home-container > h1 .up {
+.home .home-container > h1 .up {
   color: #5a5b61;
   font-weight: 800;
 }
-#home .home-container > h1 .down {
+.home .home-container > h1 .down {
   color: #363a40;
   font-weight: bolder;
 }
 
-#home .home-container > p {
+.home .home-container > p {
   line-height: 1.2;
   color: #1c0051;
   padding-bottom: 25px;
@@ -93,11 +94,11 @@ body {
   letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
 }
 
-#home .home-container > .links {
+.home .home-container > .links {
   display: flex;
 }
 
-#home .home-container > .links a {
+.home .home-container > .links a {
   width: 55px;
   height: 55px;
   padding: 5px;
@@ -111,13 +112,14 @@ body {
   
 }
 
-#home .home-container > .links a:hover {
+.home .home-container > .links a:hover {
   transform: scale(1.1);
   background-color: #b9bfff;
 }
+/* end */
 
-/* Sobre */
-#sobre {
+/* estilos section sobre */
+.sobre {
   text-align: center;
   font-size: clamp(20px, 2vw, 30px);
   font-family: var(--Open-Sans);
@@ -127,8 +129,7 @@ body {
   background-position: -5px -5px;
 }
 
-/* From Uiverse.io by Praashoo7 */
-#sobre .container {
+.sobre .container {
   margin: auto;
   width: 100%;
   height: 100%;
@@ -138,7 +139,7 @@ body {
   flex-direction: column;
 }
 
-#sobre .container span {
+.sobre .container span {
   font-weight: bold;
   font-family: var(--Baloo-Paaji-2);
   margin-top: 10px;
@@ -149,7 +150,7 @@ body {
   font-size: clamp(30px, 2vw, 40px);
 }
 
-#sobre .container .info {
+.sobre .container .info {
   max-width: 600px;
   font-weight: 400;
   color: black;
@@ -160,7 +161,7 @@ body {
   margin: auto;
 }
 
-#sobre .container .img {
+.sobre .container .img {
   width: 4.8em;
   height: 4.8em;
   background: url(../img/foto-de-perfil.png);
@@ -170,7 +171,7 @@ body {
   margin: auto;
 }
 
-#sobre .container .card {
+.sobre .container .card {
   width: fit-content;
   height: fit-content;
   background-color: #fff;
@@ -182,8 +183,7 @@ body {
   gap: 20px;
 }
 
-/* for all social containers*/
-#sobre .container .socialContainer {
+.sobre .container .socialContainer {
   width: 52px;
   height: 52px;
   background-color: rgb(44, 44, 44);
@@ -196,35 +196,35 @@ body {
   transition-duration: 0.3s;
 }
 /* instagram*/
-#sobre .container .containerOne:hover {
+.sobre .container .containerOne:hover {
   background-color: #d62976;
   transition-duration: 0.3s;
 }
 /* linkedin*/
-#sobre .container .containerTwo:hover {
+.sobre .container .containerTwo:hover {
   background-color: #0072b1;
   transition-duration: 0.3s;
 }
 /* github*/
-#sobre .container .containerThree:hover {
+.sobre .container .containerThree:hover {
   background-color: gray;
   transition-duration: 0.3s;
 }
 
-#sobre .container .socialContainer:active {
+.sobre .container .socialContainer:active {
   transform: scale(0.9);
   transition-duration: 0.3s;
 }
 
-#sobre .container .socialSvg {
+.sobre .container .socialSvg {
   width: 17px;
 }
 
-#sobre .container .socialSvg path {
+.sobre .container .socialSvg path {
   fill: rgb(255, 255, 255);
 }
 
-#sobre .container .socialContainer:hover .socialSvg {
+.sobre .container .socialContainer:hover .socialSvg {
   animation: slide-in-top 0.3s both;
 }
 
@@ -239,14 +239,15 @@ body {
     opacity: 1;
   }
 }
+/* end */
 
-/* Projetos */
-#projetos {
+/* estilos section portifolio */
+.portifolio {
   padding: 20px;
   font-family: var(--Baloo-Paaji-2);
 }
 
-#projetos h2 {
+.portifolio h2 {
   padding: 30px 20px;
   font-weight: 900;
   font-size: clamp(30px, 3vw, 40px);
@@ -255,7 +256,7 @@ body {
   margin: auto;
 }
 
-#projetos > .flex {
+.portifolio .flex {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -264,7 +265,7 @@ body {
   gap: 20px;
 }
 
-#projetos .flex .card {
+.portifolio .flex .card {
   position: relative;
   width: 500px;
   aspect-ratio: 16/9;
@@ -278,40 +279,40 @@ body {
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#projetos .flex #card1 {
+.portifolio .flex #card1 {
   background: url(../img/projeto-android.png) no-repeat;
   background-size: cover;
 }
-#projetos .flex #card2 {
+.portifolio .flex #card2 {
   background: url(../img/projeto-social.png) no-repeat;
   background-size: cover;
 }
-#projetos .flex #card3 {
+.portifolio .flex #card3 {
   background: url(../img/projeto-login.png) no-repeat;
   background-size: cover;
 }
-#projetos .flex #card4 {
+.portifolio .flex #card4 {
   background: url(../img/projeto-cordel.png) no-repeat;
   background-size: cover;
 }
 
-#projetos .flex .card svg {
+.portifolio .flex .card svg {
   width: 48px;
   fill: #333;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#projetos .flex .card__image {
+.portifolio .flex .card__image {
   width: 100%;
   height: 100%;
 }
 
-#projetos .flex .card:hover {
+.portifolio .flex .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
-#projetos .flex .card__content {
+.portifolio .flex .card__content {
   position: absolute;
   top: 0;
   left: 0;
@@ -325,11 +326,11 @@ body {
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#projetos .flex .card:hover .card__content {
+.portifolio .flex .card:hover .card__content {
   transform: rotateX(0deg);
 }
 
-#projetos .flex .card__title {
+.portifolio .flex .card__title {
   margin: 0;
   font-size: 25px;
   font-family: var(--Baloo-Paaji-2);
@@ -337,11 +338,11 @@ body {
   font-weight: 700;
 }
 
-#projetos .flex .card:hover svg {
+.portifolio .flex .card:hover svg {
   scale: 0;
 }
 
-#projetos .flex .card__description {
+.portifolio .flex .card__description {
   margin: 5px 0 20px;
   font-size: 16px;
   font-family: var(--Roboto);
@@ -349,7 +350,7 @@ body {
   line-height: 1.4;
 }
 
-#projetos .flex .card__button {
+.portifolio .flex .card__button {
   padding: 10px;
   border-radius: 25px;
   background: var(--cor3);
@@ -358,20 +359,20 @@ body {
   color: white;
 }
 
-#projetos .flex .card__button a {
+.portifolio .flex .card__button a {
   color: white;
 }
 
-#projetos .flex .secondary {
+.portifolio .flex .secondary {
   background: transparent;
   border: 1px solid #777;
 }
 
-#projetos .flex .secondary a {
+.portifolio .flex .secondary a {
   color: #777;
 }
 
-#projetos .btn {
+.portifolio .btn {
   --color: #574abd;
   --color2: #fff;
   max-width: 500px;
@@ -394,7 +395,7 @@ body {
   color: var(--color);
 }
 
-#projetos .btn::after,
+.portifolio .btn::after,
 .btn::before {
   content: "";
   display: block;
@@ -408,37 +409,33 @@ body {
   transition: 0.5s ease-out;
   background-color: var(--color);
 }
-
-#projetos .btn::before {
+.portifolio .btn::before {
   top: -50%;
   left: -25%;
   transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
 }
-
-#projetos .btn:hover::before {
+.portifolio .btn:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
 }
-
-#projetos .btn:hover::after {
+.portifolio .btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
 }
-
-#projetos .btn:hover {
+.portifolio .btn:hover {
   color: var(--color2);
 }
-
-#projetos .btn:active {
+.portifolio .btn:active {
   filter: brightness(0.7);
   transform: scale(0.98);
 }
+/* end */
 
-/* Skils */
-#skils {
+/* estilos section skils */
+.skils {
   padding: 20px;
   padding-bottom: 50px;
 }
 
-#skils h2 {
+.skils h2 {
   font-family: var(--Baloo-Paaji-2);
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -446,7 +443,7 @@ body {
   padding: 30px 20px;
 }
 
-#skils .cards {
+.skils .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -454,7 +451,7 @@ body {
   justify-content: center;
 }
 
-#skils .box-item {
+.skils .box-item {
   color: #fff;
   text-align: center;
   background-color: #1c0051;
@@ -466,9 +463,10 @@ body {
   padding: 10px;
   width: max-content;
 }
+/* end */
 
-/* Contato */
-#contato {
+/* estilos section contato */
+.contato {
   background-color: #574abd;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -479,7 +477,7 @@ body {
   padding-bottom: 50px;
 }
 
-#contato h2 {
+.contato h2 {
   font-family: var(--Baloo-Paaji-2);
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -490,7 +488,7 @@ a {
   color: blue;
 }
 
-#contato .login-box {
+.contato .login-box {
   max-width: 500px;
   margin: auto;
 }
@@ -561,20 +559,21 @@ a {
   outline: none;
   background: #09d;
 }
+/* end */
 
-/* Foooter */
-footer {
+/* estilos rodapé */
+.footer {
   background-color: #574abd;
   color: #fff;
   padding: 20px;
 }
 
-footer p {
+.footer p {
   font-family: var(--Roboto);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-footer .container-footer {
+.footer .container-footer {
   max-width: 1200px;
   margin: auto;
 
@@ -583,16 +582,16 @@ footer .container-footer {
   align-items: center;
 }
 
-footer .icons {
+.footer .icons {
   display: flex;
   gap: 20px;
 }
 
-footer .icons-item.insta {
+.footer .icons-item.insta {
   padding: 6px 6px 0px 6px;
 }
 
-footer .icons-item {
+.footer .icons-item {
   box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.010);
   background-color: #8257e6;
   padding: 2px 6px 0px 6px;
@@ -600,7 +599,7 @@ footer .icons-item {
   fill: #fff;
 }
 
-footer .icons-item:hover {
+.footer .icons-item:hover {
   background-color: #fff;
   fill: #8257e6;
 }
@@ -627,3 +626,4 @@ footer .icons-item:hover {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+/* end */
