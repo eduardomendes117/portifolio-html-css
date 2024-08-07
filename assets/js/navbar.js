@@ -2,11 +2,18 @@ const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 const links = document.querySelectorAll(".link");
 
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+hamburger.addEventListener("click", () => {
+  if (nav.classList.toggle("active")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+});
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
+    document.body.style.overflow = "auto";
   });
 });
 

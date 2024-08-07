@@ -15,24 +15,24 @@ a {
   z-index: 10;
 }
 
-header.transparent {
+.header.transparent {
   background-color: transparent;
   padding: 20px 30px;
   color: #fff;
 }
 
-header.solid {
-  background-color: white;
-  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.025);
+.header.solid {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
   padding: 0px 30px;
   color: #646fcb;
 }
-header.solid .hamburger {
+.header.solid .hamburger {
   border-top: 3px solid #574abd;
 }
 
-header.solid .hamburger::after,
-header.solid .hamburger::before {
+.header.solid .hamburger::after,
+.header.solid .hamburger::before {
   background: #574abd;
 }
 
@@ -107,7 +107,8 @@ header.solid .hamburger::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
     clip-path: circle(100px at 90% -15%);
     transition: 1s ease-out;
     flex-direction: column;
@@ -117,9 +118,14 @@ header.solid .hamburger::before {
   }
 
   .nav-list a {
-    font-size: 24px;
+    font-size: 32px;
     color: #574abd;
     opacity: 0;
+  }
+
+  .nav-list li:hover {
+    transition: all 0.3s ease-out;
+    transform: scale(1.5);
   }
 
   .nav-list li:nth-child(1) a {
