@@ -307,6 +307,11 @@ body {
   background-size: cover;
 }
 
+.portifolio .flex #card5 {
+  background: url(../img/projeto-link-bio.png) no-repeat;
+  background-size: cover;
+}
+
 .portifolio .flex .card svg {
   width: 48px;
   fill: #333;
