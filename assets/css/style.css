@@ -312,6 +312,12 @@ body {
   background-size: cover;
 }
 
+.portifolio .flex #card6 {
+  background: url(../img/hotburger.png) no-repeat;
+  background-size: cover;
+}
+
+
 .portifolio .flex .card svg {
   width: 48px;
   fill: #333;
