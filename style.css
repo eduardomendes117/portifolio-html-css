@@ -260,8 +260,11 @@ a {
 }
 
 .contato__formulario {
+  max-width: 425px;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5em;
 }
 
@@ -371,6 +374,10 @@ a {
     font-size: 2em;
   }
 
+  section {
+    padding: 2em !important;
+  }
+
   .cabecalho__titulo {
     font-size: 1.8rem;
   }
@@ -388,7 +395,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 3em;
-    padding: 2em;
   }
 
   .projetos__conteiner:nth-child(3) {
@@ -405,5 +411,10 @@ a {
 
   .projetos__descricao {
     font-size: 1.5em;
+  }
+
+  .contato__campo, 
+  .contato__botao {
+    font-size: 1.2em;
   }
 }
