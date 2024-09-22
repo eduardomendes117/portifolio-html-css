@@ -1,0 +1,369 @@
+/* Este repositório base foi criado para te ajudar caso você não saiba como começar. Lembre-se de que o portfólio é a sua carta de apresentação e você deve dar a sua cara. Por isso, convidamos você a personalizá-lo de acordo com o seu estilo e preferências; não se limite apenas ao layout proposto no Figma. */
+:root {
+  --cor-de-fundo: #f5f5f5;
+  --cor-de-fundo-menu: #ffffff;
+  --cor-de-fundo-sobre: #eaf2fd;
+  --cor-do-link: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-de-fundo);
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  line-height: 1.6;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-do-link);
+}
+
+/* ------------------------------ Seção Menu -------------------------------*/
+.cabecalho {
+  background-color: var(--cor-de-fundo-menu);
+}
+
+.cabecalho__conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cabecalho__titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.cabecalho__logo {
+  width: 1em;
+}
+
+.navegacao__lista {
+  display: none;
+}
+
+.navegacao__elemento a {
+  font-size: 0.9rem;
+}
+
+.cabecalho__botao {
+  background-color: var(--cor-do-link);
+  color: var(--cor-de-fundo-menu);
+  border-radius: 999px;
+  padding: 0.5em 1em;
+}
+/* ------------------------------ Seção Apresentação ------------------------------*/
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  height: 70vh;
+}
+
+.apresentacao__foto {
+  width: 98px;
+}
+
+.apresentacao__conteiner {
+  max-width: 768px;
+}
+
+.apresentacao__titulo {
+  line-height: 1.3em;
+  color: #333;
+  font-weight: 700;
+  padding: 0.3em 0;
+}
+
+.redes {
+  max-width: 425px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+  gap: 1em;
+}
+
+.redes__elemento a {
+  background-color: var(--cor-de-fundo-menu);
+  padding: 0.2em 1em;
+  border-radius: 1em;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.redes__elemento a:hover {
+  border: 1px solid #333;
+}
+
+/* From Uiverse.io by wilsondesouza
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+} */
+
+/* ------------------------------ Seção Sobre mim ----------------------------------*/
+.sobre-mim {
+  background-color: var(--cor-de-fundo-sobre);
+  padding: 1em;
+}
+
+.sobre-mim__container {
+  max-width: 768px;
+  margin: auto;
+}
+
+.sobre-mim__titulo,
+.sobre-mim__texto {
+  padding: 0.5em 0;
+}
+
+/*------------------------------ Seção de Habilidades ------------------------------*/
+.habilidades {
+  padding: 1em;
+}
+
+.habilidades__titulo {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.habilidades__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.habilidades__elemento {
+  background-color: var(--cor-de-fundo-menu);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+  width: 7.75rem;
+  height: 5.375rem;
+  padding: 1rem;
+}
+
+/*------------------------------ Seção de Formações --------------------------------*/
+.formacao {
+  background-color: var(--cor-de-fundo-sobre);
+  padding: 1rem;
+}
+
+.formacao__titulo {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.formacao__lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.formacao__detalhe {
+  padding-bottom: 0.5em;
+}
+
+/*------------------------------ Seção de Projetos --------------------------------*/
+.projetos {
+  padding: 1em;
+}
+
+.projetos__titulo {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+/*------------------------------ Seção de Contato ---------------------------------*/
+
+/* ------------------------------ Responsividade ---------------------------------------*/
+
+/* Tablets e telas maiores */
+@media (min-width: 768px) {
+  .cabecalho {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cabecalho__logo {
+    max-width: 100px;
+  }
+
+  .cabecalho__titulo {
+    font-size: 1.5rem;
+  }
+
+  .navegacao__lista {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .navegacao__elemento a {
+    font-size: 1rem;
+  }
+
+  .cabecalho__botao {
+    padding: 0.5em 1.5em;
+  }
+
+  .apresentacao,
+  .sobre-mim,
+  .habilidades,
+  .formacao {
+    font-size: 1.2em;
+    padding: 2rem;
+  }
+
+  .apresentacao {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .apresentacao__foto {
+    width: 146px;
+  }
+
+  .apresentacao__titulo {
+    font-size: 1.37rem;
+  }
+
+  .apresentacao__subtitulo {
+    font-size: 1.37rem;
+  }
+}
+
+/* Telas grandes */
+@media (min-width: 1024px) {
+  /* Aqui você pode ajustar ainda mais o design para telas grandes */
+  .cabecalho__titulo {
+    font-size: 1.8rem;
+  }
+
+  .navegacao__elemento a {
+    font-size: 1.1rem;
+  }
+
+  .apresentacao__titulo {
+    font-size: 3.25rem;
+  }
+}
