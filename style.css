@@ -212,6 +212,7 @@ a {
 }
 
 .projetos__conteiner {
+  margin: auto;
   padding: 1em;
 }
 
@@ -353,13 +354,21 @@ a {
   .redes {
     flex-direction: row;
   }
+
+  .projetos__conteiner {
+    max-width: 1136px;
+  }
+
+  .projetos__imagem {
+    max-width: 750px;
+  }
 }
 
 /* Telas grandes */
 @media (min-width: 1024px) {
   /* Aqui você pode ajustar ainda mais o design para telas grandes */
   h2 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .cabecalho__titulo {
@@ -372,5 +381,29 @@ a {
 
   .apresentacao__titulo {
     font-size: 3.25rem;
+  }
+  
+  .projetos__conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 2em;
+  }
+
+  .projetos__conteiner:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+
+  .projetos__imagem {
+    width: 425px;
+  }
+
+  .projetos__nome {
+    font-size: 2em;
+  }
+
+  .projetos__descricao {
+    font-size: 1.5em;
   }
 }
