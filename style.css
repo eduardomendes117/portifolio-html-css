@@ -1,9 +1,9 @@
-/* Este repositório base foi criado para te ajudar caso você não saiba como começar. Lembre-se de que o portfólio é a sua carta de apresentação e você deve dar a sua cara. Por isso, convidamos você a personalizá-lo de acordo com o seu estilo e preferências; não se limite apenas ao layout proposto no Figma. */
 :root {
   --cor-de-fundo: #f5f5f5;
   --cor-de-fundo-menu: #ffffff;
   --cor-de-fundo-sobre: #eaf2fd;
   --cor-do-link: #000000;
+  --verde: #b6f8e2;
 }
 
 * {
@@ -72,11 +72,13 @@ a {
   border-radius: 999px;
   padding: 0.5em 1em;
 }
+
 /* ------------------------------ Seção Apresentação ------------------------------*/
 .apresentacao {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 1em;
   height: 70vh;
 }
@@ -96,10 +98,16 @@ a {
   padding: 0.3em 0;
 }
 
+.apresentacao__subtitulo {
+  color: grey;
+  font-weight: bold;
+}
+
 .redes {
   max-width: 425px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding-top: 1em;
   gap: 1em;
 }
@@ -112,108 +120,12 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  width: max-content;
 }
 
 .redes__elemento a:hover {
   border: 1px solid #333;
 }
-
-/* From Uiverse.io by wilsondesouza
-ul {
-  list-style: none;
-}
-
-.example-2 {
-  display: flex;
-  align-items: center;
-}
-.example-2 .icon-content {
-  margin: 0 10px;
-  position: relative;
-}
-.example-2 .icon-content .tooltip {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 8px;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-.example-2 .icon-content:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  top: -50px;
-}
-.example-2 .icon-content a {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #333;
-  color: #4d4d4d;
-  background-color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover {
-  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-.example-2 .icon-content a svg {
-  position: relative;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-}
-.example-2 .icon-content a:hover {
-  color: white;
-}
-.example-2 .icon-content a .filled {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover .filled {
-  height: 100%;
-}
-
-.example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0274b3;
-}
-
-.example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
-  background-color: #24262a;
-}
-.example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
-}
-.example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-  background-color: #ff0000;
-} */
 
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
 .sobre-mim {
@@ -229,6 +141,10 @@ ul {
 .sobre-mim__titulo,
 .sobre-mim__texto {
   padding: 0.5em 0;
+}
+
+.sobre-mim__texto {
+  padding-bottom: 1em;
 }
 
 /*------------------------------ Seção de Habilidades ------------------------------*/
@@ -277,6 +193,10 @@ ul {
   gap: 1em;
 }
 
+.formacao__icone {
+  border-radius: 1em;
+}
+
 .formacao__detalhe {
   padding-bottom: 0.5em;
 }
@@ -291,7 +211,86 @@ ul {
   padding-bottom: 1em;
 }
 
+.projetos__conteiner {
+  padding: 1em;
+}
+
+.projetos__imagem {
+  border-radius: 0.5em;
+  width: 100%;
+}
+
+.projetos__descricao {
+  padding: 0.5em 0;
+}
+
+.projetos__botoes {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.projetos__botao:nth-child(1),
+.projetos__botao:nth-child(2) {
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+}
+
+.projetos__botao:nth-child(1) {
+  border: 1px solid blue;
+  color: blue;
+}
+
+.projetos__botao:nth-child(2) {
+  background-color: blue;
+  color: #fff;
+}
+
 /*------------------------------ Seção de Contato ---------------------------------*/
+.contato {
+  background-color: var(--cor-de-fundo-sobre);
+  padding: 1em;
+}
+
+.contato__titulo {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.contato__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.contato__campo {
+  background-color: var(--cor-de-fundo-menu);
+  border: none;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.contato__botao {
+  cursor: pointer;
+  background-color: var(--verde);
+  font-weight: 600;
+  border: none;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+/* ------------------------------ Seção de Cabeçalho ---------------------------------------*/
+.cabeçalho {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1em
+}
+
+.cabeçalho__texto {
+  padding: 0.5em;
+}
 
 /* ------------------------------ Responsividade ---------------------------------------*/
 
@@ -344,17 +343,25 @@ ul {
   }
 
   .apresentacao__titulo {
-    font-size: 1.37rem;
+    font-size: 2rem;
   }
 
   .apresentacao__subtitulo {
-    font-size: 1.37rem;
+    font-size: 1.3rem;
+  }
+
+  .redes {
+    flex-direction: row;
   }
 }
 
 /* Telas grandes */
 @media (min-width: 1024px) {
   /* Aqui você pode ajustar ainda mais o design para telas grandes */
+  h2 {
+    font-size: 1.5em;
+  }
+
   .cabecalho__titulo {
     font-size: 1.8rem;
   }
