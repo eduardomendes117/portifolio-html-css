@@ -3,6 +3,7 @@
   --cor-de-fundo-menu: #ffffff;
   --cor-de-fundo-sobre: #eaf2fd;
   --cor-do-link: #000000;
+  --cinza: #333;
   --verde: #b6f8e2;
 }
 
@@ -73,8 +74,13 @@ a {
   padding: 0.5em 1em;
 }
 
+.cabecalho__botao:hover {
+  background-color: #333;
+}
+
 /* ------------------------------ Seção Apresentação ------------------------------*/
 .apresentacao {
+  background-image: linear-gradient(to top, #EAF2FD 0%, #efefef 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,7 +136,7 @@ a {
 /* ------------------------------ Seção Sobre mim ----------------------------------*/
 .sobre-mim {
   background-color: var(--cor-de-fundo-sobre);
-  padding: 1em;
+  padding: 2em 1em;
 }
 
 .sobre-mim__container {
@@ -144,35 +150,65 @@ a {
 }
 
 .sobre-mim__texto {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
+}
+
+.sobre-mim__botao {
+  background-color: var(--cor-do-link);
+  color: var(--cor-de-fundo-menu);
+  padding: 1em 1.5em;
+  border-radius: 999px;
 }
 
 /*------------------------------ Seção de Habilidades ------------------------------*/
 .habilidades {
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
 }
 
 .habilidades__titulo {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .habilidades__lista {
+  padding-top: 0.5em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
 }
 
+.habilidades__container {
+  max-width: 1000px;
+}
+
 .habilidades__elemento {
-  background-color: var(--cor-de-fundo-menu);
+  background-color: var(--cor-do-link);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: baseline;
-  width: 7.75rem;
-  height: 5.375rem;
-  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+}
+
+.habilidades__elemento:hover {
+  box-shadow: 2px 2px 5px #3333336d;
+}
+
+.habilidades__elemento svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--cor-de-fundo-menu);
+}
+
+.habilidades__elemento p {
+  color: var(--cor-de-fundo-menu);
+  font-weight: 600;
 }
 
 /*------------------------------ Seção de Formações --------------------------------*/
@@ -193,7 +229,8 @@ a {
   gap: 1em;
 }
 
-.formacao__icone {
+.formacao__logo {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   border-radius: 1em;
 }
 
@@ -217,6 +254,7 @@ a {
 }
 
 .projetos__imagem {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   border-radius: 0.5em;
   width: 100%;
 }
@@ -231,6 +269,15 @@ a {
   gap: 1em;
 }
 
+.projetos__botao:nth-child(1):hover {
+  color: #000000;
+}
+
+.projetos__botao:nth-child(2):hover {
+  background-color: #000000;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
 .projetos__botao:nth-child(1),
 .projetos__botao:nth-child(2) {
   border: none;
@@ -239,13 +286,13 @@ a {
 }
 
 .projetos__botao:nth-child(1) {
-  border: 1px solid blue;
-  color: blue;
+  border: 1px solid var(--cinza);
+  color: var(--cinza);
 }
 
 .projetos__botao:nth-child(2) {
-  background-color: blue;
-  color: #fff;
+  background-color: var(--cinza);
+  color: var(--cor-de-fundo-menu);
 }
 
 /*------------------------------ Seção de Contato ---------------------------------*/
@@ -375,11 +422,15 @@ a {
   }
 
   section {
-    padding: 2em !important;
+    padding: 3em !important;
   }
 
   .cabecalho__titulo {
     font-size: 1.8rem;
+  }
+
+  .cabecalho__botao {
+    padding: 0.5em 2em;
   }
 
   .navegacao__elemento a {
@@ -395,6 +446,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 3em;
+    padding: 3em;
   }
 
   .projetos__conteiner:nth-child(3) {
