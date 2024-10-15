@@ -7,7 +7,7 @@
   margin-inline: auto;
   padding: 15px;
   border-radius: 5px;
-  max-width: 400px;
+  max-width: 271px;
   overflow: hidden;
   mask: linear-gradient(
     to right,
@@ -84,4 +84,17 @@
 }
 .count-particles {
   border-radius: 0 0 3px 3px;
+}
+
+
+@media screen and (min-width: 400px) {
+  .scroll {
+    max-width: 351px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .scroll {
+    max-width: 70%;
+  }
 }
