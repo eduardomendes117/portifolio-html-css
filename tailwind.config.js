@@ -17,6 +17,7 @@ module.exports = {
       },
   
       colors: {
+        gray400: "#878EA1",
         transparent: "transparent",
         current: "currentColor",
         white: "#ffffff",
