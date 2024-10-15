@@ -55,17 +55,16 @@
             </svg>
             eduardo
           </h1>
-          <ul class="hidden lg:flex gap-5 text-lg">
+
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
             <li
               class="hover:border-b-2 dark:text-white dark:hover:text-white hover:text-black"
             >
               <a href="#sobre-mim">Sobre mim</a>
-            </li>
-
-            <li
-              class="hover:border-b-2 dark:text-white dark:hover:text-white hover:text-black"
-            >
-              <a href="#habilidades">Habilidades</a>
             </li>
 
             <li
@@ -78,13 +77,12 @@
             >
               <a href="#projetos">Projetos</a>
             </li>
+            <li
+              class="hover:border-b-2 dark:text-white dark:hover:text-white hover:text-black"
+            >
+              <a href="#contato">Contato</a>
+            </li>
           </ul>
-
-          <a
-            class="bg-black hover:bg-zinc-800 text-white px-3 lg:px-8 py-2 rounded-full"
-            href="#contato"
-            >Contato</a
-          >
         </nav>
       </header>
 
@@ -92,7 +90,7 @@
       <section
         class="h-[100vh] dark:bg-slate-950 dark:bg-gradient-radial from-slate-800 flex flex-col justify-center px-4"
       >
-        <div class="max-w-screen-md text-center mx-auto">
+        <div class="w-full md:max-w-screen-md text-center mx-auto">
           <p class="text-xl font-medium dark:text-gray400 z-10">
             Olá! Meu nome é
             <span
@@ -267,7 +265,8 @@
         <div class="flex gap-3 justify-center">
           <a
             class="flex gap-2 items-center text-slate-500 bg-white/50 dark:bg-slate-800 dark:text-white hover:bg-slate-700 rounded-full px-3 py-1"
-            href="https://github.com/eduardomendes117" target="_blank"
+            href="https://github.com/eduardomendes117"
+            target="_blank"
           >
             <svg
               class="w-5 h-5 fill-black"
@@ -283,7 +282,8 @@
           </a>
           <a
             class="flex gap-2 items-center text-slate-500 bg-white/50 dark:bg-slate-800 dark:text-white hover:bg-slate-700 rounded-full px-3 py-1"
-            href="https://www.linkedin.com/in/eduardo-mendes-26538030b/" target="_blank"
+            href="https://www.linkedin.com/in/eduardo-mendes-26538030b/"
+            target="_blank"
           >
             <svg
               class="w-5 h-5 fill-blue-500"
