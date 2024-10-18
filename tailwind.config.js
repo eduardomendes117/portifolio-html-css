@@ -12,7 +12,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ["Raleway", "sans-serif"],
+        fira: ["Fira Code", "monospace"],
+        Inter: ["Inter", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
   
