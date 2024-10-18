@@ -65,7 +65,7 @@
   transform: rotate(-405deg);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .menu-button-container {
     display: flex;
   }
